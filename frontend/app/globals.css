@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  --color-main: #ef7250;
+  --color-second-white: #f8fbfb;
+  --breakpoint-xs: 400px;
+  --font-poppins: var(--font-poppins);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -117,6 +124,47 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-foreground box-border;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 sm:px-8 lg:px-16 mx-auto;
+  }
+  .transition-all {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  p {
+    @apply text-gray-600 leading-6;
+  }
+  .nav-item {
+    @apply text-sm font-semibold capitalize text-slate-900 hover:text-main transition-all;
+  }
+  .main-btn {
+    @apply !rounded-xl !px-6 !font-semibold !capitalize !bg-gradient-to-t !from-orange-600 !to-orange-400 hover:from-orange-400 hover:to-orange-600 shadow-sm hover:shadow-md hover:cursor-pointer shadow-main !transition-all;
+  }
+  .second-btn {
+    @apply !rounded-xl !px-6 !font-semibold !capitalize !bg-transparent hover:bg-transparent !shadow hover:shadow-md hover:shadow-slate-600 !border !border-slate-500 !text-slate-600 hover:cursor-pointer !transition-all;
+  }
+  .main-btn:hover {
+    background: linear-gradient(to top, #fb923c, #f97316) !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+    cursor: pointer !important;
+  }
+  .second-btn:hover {
+    background-color: transparent !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0px 4px 6px rgba(31, 41, 55, 0.1) !important;
+    cursor: pointer !important;
+  }
+  .title {
+    @apply text-3xl sm:text-4xl font-poppins font-semibold capitalize leading-10;
+  }
+  .subtitle {
+    @apply text-xs sm:text-sm font-poppins font-bold text-main uppercase;
+  }
+  .main-bg{
+    @apply bg-[url('/images/bg-hero.png')] bg-cover bg-center;
   }
 }

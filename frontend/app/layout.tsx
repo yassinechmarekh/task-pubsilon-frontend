@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +13,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-poppins',
 });
 
 export const metadata: Metadata = {
@@ -26,19 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
-        <Toaster
-          toastOptions={{
-            classNames: {
-              error: 'bg-red-400',
-              success: 'text-green-400',
-              warning: 'text-yellow-400',
-              info: 'bg-blue-400',
-            },
-          }}
-        />
+        <Toaster richColors />
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

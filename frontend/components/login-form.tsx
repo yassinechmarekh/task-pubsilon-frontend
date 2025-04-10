@@ -33,7 +33,7 @@ function LoginForm() {
     try {
       console.log(data);
       const result = await login(data);
-      if (result?.status === 200) {
+      if (result?.status === 201) {
         const token = result.data.token;
         setCookie("token", token, {
           expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
@@ -44,7 +44,7 @@ function LoginForm() {
         });
       } else {
         toast.error("Error", {
-          description: "Youe not login, access denied !",
+          description: "You are not login, access denied !",
         });
       }
     } catch (error) {
