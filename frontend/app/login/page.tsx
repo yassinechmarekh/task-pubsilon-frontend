@@ -1,7 +1,9 @@
-import LoginForm from "@/components/login-form";
 import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
+
+// Components
+import LoginForm from "@/components/login-form";
 
 export const metadata: Metadata = {
   title: "Login page - Pubsilon",

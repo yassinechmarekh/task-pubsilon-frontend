@@ -1,3 +1,4 @@
+// Components
 import About from "@/components/home/about";
 import Features from "@/components/home/features";
 import Hero from "@/components/home/hero";

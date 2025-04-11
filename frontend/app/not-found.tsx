@@ -1,7 +1,9 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
 import { AlertCircle } from "lucide-react";
+
+// Components
+import { Button } from "@/components/ui/button";
 
 function NotFoundPage() {
   return (
@@ -16,7 +18,7 @@ function NotFoundPage() {
               Page not found
             </h1>
             <p className="text-muted-foreground text-lg">
-              Sorry, we couldn't find the page you're looking for. The page
+              Sorry, we couldn&apost;find the page you&apos;re looking for. The page
               might have been moved, deleted, or never existed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

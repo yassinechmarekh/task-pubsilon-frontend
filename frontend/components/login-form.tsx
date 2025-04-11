@@ -1,6 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { loginSchema, loginType } from "@/types/auth-types";
+import { login } from "@/action/auth-action";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
+import { setCookie } from "cookies-next";
+
+// Components
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
+import Logo from "./logo";
 import {
   Form,
   FormControl,
@@ -10,16 +22,6 @@ import {
   FormLabel,
   FormMessage,
 } from "./ui/form";
-import { useForm } from "react-hook-form";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { loginSchema, loginType } from "@/types/auth-types";
-import { login } from "@/action/auth-action";
-import { useRouter } from "next/navigation";
-import { toast } from "sonner";
-import { setCookie } from "cookies-next";
-import Logo from "./logo";
 
 function LoginForm() {
   const form = useForm<loginType>({

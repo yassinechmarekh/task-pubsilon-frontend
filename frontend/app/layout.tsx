@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+
+// Components
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { getCookie } from "cookies-next/client";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

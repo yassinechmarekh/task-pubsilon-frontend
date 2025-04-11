@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Button } from "./ui/button";
+import React from "react";
 import { useRouter } from "next/navigation";
-import { deleteCookie, getCookie } from "cookies-next";
+import { deleteCookie } from "cookies-next";
+
+// Components
+import { Button } from "./ui/button";
 
 interface LogoutBtnPros {
   className?: string;

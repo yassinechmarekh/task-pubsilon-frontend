@@ -1,8 +1,9 @@
-import LogoutBtn from "@/components/logout-btn";
-import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
+
+// Components
+import LogoutBtn from "@/components/logout-btn";
 
 export const metadata: Metadata = {
   title: "Welcome page - Pubsilon",
