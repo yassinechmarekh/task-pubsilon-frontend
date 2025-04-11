@@ -8,7 +8,12 @@ export async function login(
   try {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_SERVER_URL}api/auth/login`,
-      data
+      data,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
     );
     // console.log(response);
     return response;
@@ -22,7 +27,7 @@ export async function verifyToken(token: string) {
   try {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_SERVER_URL}api/auth/verify-token`,
-      {token},
+      { token },
       {
         headers: {
           "Content-Type": "application/json",

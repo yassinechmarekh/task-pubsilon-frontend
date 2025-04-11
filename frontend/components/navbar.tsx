@@ -64,10 +64,10 @@ function Navbar() {
         <LogoutBtn />
       ) : (
         <div className={"lg:flex gap-4 hidden"}>
-          <Link href="/">
+          <Link href="/login">
             <Button className={"main-btn text-sm"}>register</Button>
           </Link>
-          <Link href="/">
+          <Link href="/login">
             <Button className={"second-btn text-sm"}>login</Button>
           </Link>
         </div>
