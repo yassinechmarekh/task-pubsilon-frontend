@@ -9,7 +9,7 @@ This project is a frontend application built with **Next.js 15**, designed to wo
 1. Clone the repository :
 
    ```bash
-   git clone https://github.com/yassinechmarekh/task-pubsilon.git
+   git clone https://github.com/yassinechmarekh/task-pubsilon-frontend.git
    cd frontend
    ```
 
