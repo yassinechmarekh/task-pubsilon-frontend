@@ -88,12 +88,12 @@ function Navbar() {
               </Link>
             ))}
             <div className="mt-4 px-4 flex gap-2 flex-col xs:flex-row">
-              <Link href="#" className={"w-full xs:w-1/2"}>
+              <Link href="/login" className={"w-full xs:w-1/2"}>
                 <Button className="w-full bg-white text-black border border-gray-300 hover:bg-gray-100 capitalize">
                   register
                 </Button>
               </Link>
-              <Link href="#" className={"w-full xs:w-1/2"}>
+              <Link href="/login" className={"w-full xs:w-1/2"}>
                 <Button className="w-full bg-white text-black border border-gray-300 hover:bg-gray-100 capitalize">
                   login
                 </Button>

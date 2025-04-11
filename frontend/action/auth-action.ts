@@ -7,7 +7,7 @@ export async function login(
 ): Promise<AxiosResponse | undefined> {
   try {
     const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/login`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}api/auth/login`,
       data
     );
     // console.log(response);
@@ -21,7 +21,7 @@ export async function login(
 export async function verifyToken(token: string) {
   try {
     const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/verify-token`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}api/auth/verify-token`,
       {token},
       {
         headers: {
