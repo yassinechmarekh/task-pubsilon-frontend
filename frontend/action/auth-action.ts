@@ -10,9 +10,27 @@ export async function login(
       `${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/login`,
       data
     );
-    console.log(response);
+    // console.log(response);
     return response;
   } catch (error) {
     console.error(error);
+  }
+}
+
+// verfication action
+export async function verifyToken(token: string) {
+  try {
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/api/auth/verify-token`,
+      {token},
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
   }
 }

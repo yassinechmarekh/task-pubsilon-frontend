@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <section className={'bg-second-white'}>
+    <section className={"bg-second-white"}>
       <div className="main-bg">
         <div className="container">
           <div
@@ -18,21 +18,21 @@ function Hero() {
                 "text-2xl xs:text-3xl sm:text-4xl font-poppins font-semibold capitalize"
               }
             >
-              The biggest tech event for web developers
+              Empowering Businesses With Smart Digital Solutions
             </h1>
             <p className={"text-sm sm:text-base"}>
-              Baza has brought together some of the biggest minds in business
-              and technology to discuss disruptive trends in the IT world.
+              Pubsilon designs and develops innovative digital products to help
+              businesses thrive in a fast-changing tech world.
             </p>
             <div className={"flex gap-3"}>
-              <Link href="#">
+              <Link href="/login">
                 <Button className={"main-btn text-xs sm:text-base"}>
-                  Register now
+                  Get Started
                 </Button>
               </Link>
-              <Link href="#">
+              <Link href="/#about">
                 <Button className={"second-btn text-xs sm:text-base"}>
-                  Learn more
+                  Discover More
                 </Button>
               </Link>
             </div>
@@ -44,6 +44,7 @@ function Hero() {
               height={300}
               alt={"hero image"}
               className={"mx-auto w-48 xs:w-60 md:w-64 lg:w-72"}
+              priority={true}
             />
           </div>
         </div>

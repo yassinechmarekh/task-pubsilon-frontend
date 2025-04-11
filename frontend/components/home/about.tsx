@@ -5,23 +5,21 @@ import Image from "next/image";
 
 function About() {
   return (
-    <section className={"bg-white py-10"}>
+    <section className={"bg-white py-10"} id="about">
       <div className="container">
         <div className="flex flex-col-reverse lg:flex-row gap-4 items-center">
           <div className={"w-full lg:w-1/2"}>
-            <h5 className={"subtitle"}>
-              About Event
-            </h5>
-            <h1 className={'title mt-2'}>Largest event for web developers and UI/UX designers</h1>
-            <p className={'mt-4'}>
-              Baza has brought together some of the biggest minds in business
-              and technology to discuss cutting-edge technology and disruptive
-              trends in the IT world. In this challenging time, we will combine
-              our knowledge to become even stronger. We’ll discuss the best
-              practices for workflows and talk about new tools for effective
-              work.
+            <h5 className={"subtitle"}>About Section</h5>
+            <h1 className={"title mt-2"}>
+              Pioneering Smart Digital Experiences
+            </h1>
+            <p className={"mt-4"}>
+              At Pubsilon, we bring together creative minds and tech experts to
+              develop cutting-edge solutions for digital transformation. From
+              web and mobile applications to AI-powered tools, we help
+              businesses become smarter and more efficient.
             </p>
-            <Link href="#">
+            <Link href="/#why-you-need-to-register">
               <Button className={"second-btn mt-6"}>Learn more</Button>
             </Link>
           </div>
@@ -31,7 +29,8 @@ function About() {
               alt="about image"
               width={500}
               height={500}
-              className={'mx-auto lg:ml-auto'}
+              className={"mx-auto lg:ml-auto"}
+              priority={false}
             />
           </div>
         </div>

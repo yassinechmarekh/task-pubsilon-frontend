@@ -6,19 +6,19 @@ const featuresItems: {
   image: string;
 }[] = [
   {
-    title: "20+ famous speakers",
+    title: "20+ Innovative Projects",
     image: "/images/features/feature-1.png",
   },
   {
-    title: "Awesome atmosphere",
+    title: "Dynamic & Creative Environment",
     image: "/images/features/feature-2.png",
   },
   {
-    title: "Opportunities for growth",
+    title: "Solutions for Business Growth",
     image: "/images/features/feature-3.png",
   },
   {
-    title: "Opportunities for growth",
+    title: "Cutting-edge Technology",
     image: "/images/features/feature-4.png",
   },
 ];
@@ -35,10 +35,14 @@ function Features() {
                 "flex items-center justify-center space-x-2 border border-slate-200 p-4 rounded-2xl hover:bg-second-white hover:cursor-text transition-all"
               }
             >
-              <Image src={feature.image} alt="test" width={50} height={50} />
-              <h3 className={"font-semibold capitalize"}>
-                {feature.title}
-              </h3>
+              <Image
+                src={feature.image}
+                alt="test"
+                width={50}
+                height={50}
+                priority={false}
+              />
+              <h3 className={"font-semibold capitalize"}>{feature.title}</h3>
             </div>
           ))}
         </div>

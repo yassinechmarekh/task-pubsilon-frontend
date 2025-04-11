@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function WhyUs() {
   return (
-    <section className={"bg-white py-10"}>
+    <section className={"bg-white py-10"} id="why-you-need-to-register">
       <div className="container">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-4">
           <div className="w-full lg:w-1/2">
@@ -15,23 +15,21 @@ function WhyUs() {
               width={300}
               height={300}
               className={"mx-auto lg:mr-auto"}
+              priority={false}
             />
           </div>
           <div className={"w-full lg:w-1/2"}>
-            <h5 className={"subtitle"}>Why you need to register</h5>
+            <h5 className={"subtitle"}>Why Choose Pubsilon ?</h5>
             <h1 className={"title mt-2"}>
-              Coffee pizza and a lot of career opportunities
+              Coffee, Creativity & Countless Ideas
             </h1>
             <p className={"mt-4"}>
-              Baza has brought together some of the biggest minds in business
-              and technology to discuss cutting-edge technology and disruptive
-              trends in the IT world. In this challenging time, we will combine
-              our knowledge to become even stronger. We’ll discuss the best
-              practices for workflows and talk about new tools for effective
-              work.
+              We offer more than just services — we bring a unique working
+              atmosphere where creativity and innovation flourish. Let’s build
+              something amazing together.
             </p>
-            <Link href="#">
-              <Button className={"second-btn mt-6"}>Learn more</Button>
+            <Link href="/login">
+              <Button className={"second-btn mt-6"}>Get Started</Button>
             </Link>
           </div>
         </div>

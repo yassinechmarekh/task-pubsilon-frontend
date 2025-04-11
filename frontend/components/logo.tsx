@@ -2,9 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function Logo() {
+interface LogoProps {
+  className?: string;
+}
+
+function Logo({ className }: LogoProps) {
   return (
-    <Link href={'/'} className={"flex items-center space-x-1 hover:opacity-80 transition-all"}>
+    <Link
+      href={"/"}
+      className={`flex items-center space-x-1 hover:opacity-80 transition-all ${className}`}
+    >
       <Image
         src={"/images/logo.svg"}
         alt={"logo"}

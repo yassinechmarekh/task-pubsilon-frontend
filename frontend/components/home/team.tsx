@@ -40,25 +40,40 @@ const ourTeam: {
 
 function Team() {
   return (
-    <section className={"bg-second-white py-10"}>
+    <section className={"bg-second-white py-10"} id="our-team">
       <div className="container">
-        <div className={'w-full md:w-2/3 mx-auto text-center'}>
-          <h5 className={'subtitle'}>Our Speakers</h5>
-          <h1 className={'text-4xl font-bold capitalize mt-1'}>Meet lead tech experts</h1>
-          <p className={'text-xs sm:text-sm mt-3'}>
-            Baza has brought together some of the biggest minds in business and
-            technology to discuss cutting-edge technology and disruptive trends
-            in the IT world.
+        <div className={"w-full md:w-2/3 mx-auto text-center"}>
+          <h5 className={"subtitle"}>Our Team</h5>
+          <h1 className={"text-4xl font-bold capitalize mt-1"}>
+            Meet the Experts Behind Pubsilon
+          </h1>
+          <p className={"text-xs sm:text-sm mt-3"}>
+            Our team combines creativity, strategy, and technical skills to turn
+            ambitious ideas into digital realities.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-            {ourTeam.map((item) => (
-                <div key={item.name} className={'flex flex-col items-center space-y-1 text-center'}>
-                    <Image src={item.profile} alt={item.name} width={180} height={180} className={'rounded-full'} />
-                    <h5 className={'text-lg text-black font-semibold capitalize mt-2'}>{item.name}</h5>
-                    <p className={'text-sm text-slate-600 capitalize'}>{item.post}</p>
-                </div>
-            ))}
+          {ourTeam.map((item) => (
+            <div
+              key={item.name}
+              className={"flex flex-col items-center space-y-1 text-center"}
+            >
+              <Image
+                src={item.profile}
+                alt={item.name}
+                width={180}
+                height={180}
+                className={"rounded-full"}
+                priority={false}
+              />
+              <h5
+                className={"text-lg text-black font-semibold capitalize mt-2"}
+              >
+                {item.name}
+              </h5>
+              <p className={"text-sm text-slate-600 capitalize"}>{item.post}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
