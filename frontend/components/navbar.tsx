@@ -25,7 +25,7 @@ const navItems: {
 
 function Navbar() {
   const [token, setToken] = useState<string | null>(null);
-  const [isOpen, setIsOpen] = useState<Boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const checkToken = () => {
